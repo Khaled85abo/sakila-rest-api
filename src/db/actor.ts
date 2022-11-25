@@ -27,7 +27,7 @@ export const insertActor = async (actor: Actor) => {
 
 };
 
-export const updateActor = async (actorId: string, actor: Actor)=> {
+export const updateActor = async (actorId: string, actor: Partial<Actor>)=> {
     const id = Number(actorId);
     const updatedActor = await prisma.actor.update({
       where: {
